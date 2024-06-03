@@ -44,7 +44,7 @@ class Exercises {
   public static int example2(int[] arr) {
     int n = arr.length, total = 0;
     for (int j=0; j < n; j += 2)    // note the increment of 2
-      total += arr[j];
+      total += arr[j]; //O(n/2)
     return total;
   }
 
