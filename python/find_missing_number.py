@@ -6,9 +6,14 @@ def find_missing_number(A):
 
 
 def main():
+    A = []
+    print(find_missing_number(A))
+
+    A = [0]
+    print(find_missing_number(A))
+
     A = [0, 1, 2, 4, 5, 6]
-    missing_number = find_missing_number(A)
-    print(f"The missing number is: {missing_number}")
+    print(find_missing_number(A))
 
 
 if __name__ == "__main__":
