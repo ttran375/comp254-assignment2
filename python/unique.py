@@ -34,12 +34,17 @@ def find_max_input_size_within_time_limit(function, time_limit=60):
         n *= 2
 
 
-max_n_unique1 = find_max_input_size_within_time_limit(unique1, 1)
-print(
-    f"For the brute-force algorithm, the largest value of n within one minute: {max_n_unique1}"
-)
+def main():
+    max_n_unique1 = find_max_input_size_within_time_limit(unique1, 1)
+    print(
+        f"For the brute-force algorithm, the largest value of n within one minute: {max_n_unique1}"
+    )
 
-max_n_unique2 = find_max_input_size_within_time_limit(unique2, 1)
-print(
-    f"For the sorted algorithm, the largest value of n within one minute: {max_n_unique2}"
-)
+    max_n_unique2 = find_max_input_size_within_time_limit(unique2, 1)
+    print(
+        f"For the sorted algorithm, the largest value of n within one minute: {max_n_unique2}"
+    )
+
+
+if __name__ == "__main__":
+    main()
