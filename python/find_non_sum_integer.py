@@ -1,19 +1,10 @@
 def find_non_sum_integer(A):
     n = len(A)
-    if n < 2:
-        return 1 if n == 0 else A[0] + 1
-
-    max_elem = max(A)
-    element_set = set(A)
-
-    for target in range(2, 2 * max_elem + 1):
-        found = False
-        for num in A:
-            if (target - num) in element_set:
-                found = True
-                break
-        if not found:
-            return target
+    if n == 0:
+        return 0
+    
+    max_element = max(A)
+    return 2 * max_element + 1
 
 
 def main():
