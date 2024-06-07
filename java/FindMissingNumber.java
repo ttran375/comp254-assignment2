@@ -1,5 +1,5 @@
 public class FindMissingNumber {
-    public static int findMissingNumber(int[] A) {
+    public static void findMissingNumber(int[] A) {
         int n = A.length + 1;
         int totalSum = n * (n - 1) / 2;
         int arraySum = 0;
@@ -8,12 +8,17 @@ public class FindMissingNumber {
             arraySum += num;
         }
 
-        return totalSum - arraySum;
+        System.out.println(totalSum - arraySum);
     }
 
     public static void main(String[] args) {
-        int[] A = { 0, 1, 2, 4, 5, 6 };
-        int missingNumber = findMissingNumber(A);
-        System.out.println("The missing number is: " + missingNumber);
+        int[] array1 = {};
+        findMissingNumber(array1);
+
+        int[] array2 = { 0 };
+        findMissingNumber(array2);
+
+        int[] array3 = { 0, 1, 2, 4, 5, 6 };
+        findMissingNumber(array3);
     }
 }
