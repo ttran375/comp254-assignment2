@@ -30,8 +30,19 @@ def find_max_input_size_within_time_limit(function, time_limit=60):
     while True:
         execution_time = measure_execution_time(function, n)
         if execution_time > time_limit:
-            return n // 2
+            break
         n *= 2
+
+    low, high = n // 2, n
+    while low < high:
+        mid = (low + high) // 2
+        execution_time = measure_execution_time(function, mid)
+        if execution_time <= time_limit:
+            low = mid + 1
+        else:
+            high = mid
+
+    return low - 1
 
 
 def main():
