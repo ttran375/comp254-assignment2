@@ -35,9 +35,22 @@ class Uniqueness {
     while (true) {
       double executionTime = measureExecutionTime(function, n);
       if (executionTime > timeLimit)
-        return n / 2;
+        break;
       n *= 2;
     }
+
+    int low = n / 2;
+    int high = n;
+    while (low < high) {
+      int mid = (low + high) / 2;
+      double executionTime = measureExecutionTime(function, mid);
+      if (executionTime <= timeLimit) {
+        low = mid + 1;
+      } else {
+        high = mid;
+      }
+    }
+    return low - 1;
   }
 
   interface IntArrayFunction {
