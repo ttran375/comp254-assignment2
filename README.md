@@ -2,39 +2,38 @@
 
 Purpose: The purpose of this Lab assignment is to:
 
--   Perform experimental analysis of algorithms
+- Perform experimental analysis of algorithms
 
--   Explain and proof the running time of algorithms in terms of big-Oh
+- Explain and proof the running time of algorithms in terms of big-Oh
     notation
 
--   Design various algorithm that achieve a specified running time
+- Design various algorithm that achieve a specified running time
 
 References: Read the course’s text chapter 4 and the lecture slides.
 This material provides the necessary information that you need to
 complete the exercises.
 
-
 ## Exercise 1
 
 **If your first name starts with a letter from A-J inclusively:**
 
-1.  Give a big-Oh characterization, in terms of **n**, of the running
+1. Give a big-Oh characterization, in terms of **n**, of the running
     time of the **example1** method from **Exercises.java** class in
     Lesson 4 examples.
 
-2.  Give a big-Oh characterization, in terms of **n**, of the running
+2. Give a big-Oh characterization, in terms of **n**, of the running
     time of the **example2** method from **Exercises.java** class in
     Lesson 4 examples.
 
-3.  Give a big-Oh characterization, in terms of **n**, of the running
+3. Give a big-Oh characterization, in terms of **n**, of the running
     time of the **example3** method from **Exercises.java** class in
     Lesson 4 examples.
 
-4.  Give a big-Oh characterization, in terms of **n**, of the running
+4. Give a big-Oh characterization, in terms of **n**, of the running
     time of the **example4** method from **Exercises.java** class in
     Lesson 4 examples.
 
-5.  Give a big-Oh characterization, in terms of **n**, of the running
+5. Give a big-Oh characterization, in terms of **n**, of the running
     time of the **example5** method from **Exercises.java** class in
     Lesson 4 examples.
 
@@ -43,23 +42,23 @@ results and a brief explanation.
 
 **If your first name starts with a letter from K-Z inclusively:**
 
-1.  . Give a big-Oh characterization, in terms of **n**, of the running
+1. . Give a big-Oh characterization, in terms of **n**, of the running
     time of the **example1** method from **Exercises2.java** class in
     Lesson 4 examples.
 
-2.  Give a big-Oh characterization, in terms of **n**, of the running
+2. Give a big-Oh characterization, in terms of **n**, of the running
     time of the **example2** method from **Exercises2.java** class in
     Lesson 4 examples.
 
-3.  Give a big-Oh characterization, in terms of **n**, of the running
+3. Give a big-Oh characterization, in terms of **n**, of the running
     time of the **example3** method from **Exercises.2java** class in
     Lesson 4 examples.
 
-4.  Give a big-Oh characterization, in terms of **n**, of the running
+4. Give a big-Oh characterization, in terms of **n**, of the running
     time of the **example4** method from **Exercises2.java** class in
     Lesson 4 examples.
 
-5.  Give a big-Oh characterization, in terms of **n**, of the running
+5. Give a big-Oh characterization, in terms of **n**, of the running
     time of the **example5** method from **Exercises2.java** class in
     Lesson 4 examples.
 
