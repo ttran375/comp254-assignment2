@@ -180,3 +180,170 @@ rule:
 Example: **JohnSmith_COMP254Lab2.zip**
 
 Upload the zip file on eCentennial using the Assignment link.
+
+## Appendix
+
+`exercises.py`
+```python
+# Copyright 2013, Michael H. Goldwasser
+#
+# Developed for use with the book:
+#
+#    Data Structures and Algorithms in Python
+#    Michael T. Goodrich, Roberto Tamassia, and Michael H. Goldwasser
+#    John Wiley & Sons, 2013
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+def example1(S):
+  """Return the sum of the elements in sequence S."""
+  n = len(S)
+  total = 0
+  for j in range(n):             # loop from 0 to n-1
+    total += S[j]  # running time is O(n)
+  return total
+
+def example2(S):
+  """Return the sum of the elements with even index in sequence S."""
+  n = len(S)
+  total = 0
+  for j in range(0, n, 2):       # note the increment of 2
+    total += S[j]
+  return total
+  
+def example3(S):
+  """Return the sum of the prefix sums of sequence S."""
+  n = len(S)
+  total = 0
+  for j in range(n):            # loop from 0 to n-1
+    for k in range(1+j):        # loop from 0 to j
+      total += S[k]
+  return total
+
+def example4(S):
+  """Return the sum of the prefix sums of sequence S."""
+  n = len(S)
+  prefix = 0
+  total = 0
+  for j in range(n):
+    prefix += S[j]
+    total += prefix
+  return total
+
+def example5(A, B):           # assume that A and B have equal length
+  """Return the number of elements in B equal to the sum of prefix sums in A."""
+  n = len(A)                  
+  count = 0
+  for i in range(n):          # loop from 0 to n-1
+    total = 0
+    for j in range(n):        # loop from 0 to n-1
+      for k in range(1+j):    # loop from 0 to j
+        total += A[k]
+    if B[i] == total:
+      count += 1
+  return count
+```
+
+`prefix_averages.py`
+```python
+# Copyright 2013, Michael H. Goldwasser
+#
+# Developed for use with the book:
+#
+#    Data Structures and Algorithms in Python
+#    Michael T. Goodrich, Roberto Tamassia, and Michael H. Goldwasser
+#    John Wiley & Sons, 2013
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+def prefix_average1(S):
+  """Return list such that, for all j, A[j] equals average of S[0], ..., S[j]."""
+  n = len(S)
+  A = [0] * n                     # create new list of n zeros
+  for j in range(n):
+    total = 0                     # begin computing S[0] + ... + S[j]
+    for i in range(j + 1):
+      total += S[i]
+    A[j] = total / (j+1)          # record the average
+  return A
+
+def prefix_average2(S):
+  """Return list such that, for all j, A[j] equals average of S[0], ..., S[j]."""
+  n = len(S)
+  A = [0] * n                     # create new list of n zeros
+  for j in range(n):
+    A[j] = sum(S[0:j+1]) / (j+1)  # record the average
+  return A
+
+def prefix_average3(S):
+  """Return list such that, for all j, A[j] equals average of S[0], ..., S[j]."""
+  n = len(S)
+  A = [0] * n                   # create new list of n zeros
+  total = 0                     # compute prefix sum as S[0] + S[1] + ...
+  for j in range(n):
+    total += S[j]               # update prefix sum to include S[j]
+    A[j] = total / (j+1)        # compute average based on current sum
+  return A
+```
+
+`unique.py`
+```python
+# Copyright 2013, Michael H. Goldwasser
+#
+# Developed for use with the book:
+#
+#    Data Structures and Algorithms in Python
+#    Michael T. Goodrich, Roberto Tamassia, and Michael H. Goldwasser
+#    John Wiley & Sons, 2013
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+def unique1(S):
+  """Return True if there are no duplicate elements in sequence S."""
+  for j in range(len(S)):
+    for k in range(j+1, len(S)):
+      if S[j] == S[k]:
+        return False              # found duplicate pair
+  return True                     # if we reach this, elements were unique
+
+def unique2(S):
+  """Return True if there are no duplicate elements in sequence S."""
+  temp = sorted(S)                # create a sorted copy of S
+  for j in range(1, len(temp)):
+    if S[j-1] == S[j]:
+      return False                # found duplicate pair
+  return True                     # if we reach this, elements were unique
+```
