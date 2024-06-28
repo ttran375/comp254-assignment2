@@ -62,21 +62,15 @@ def main():
     plt.figure(figsize=(10, 6))
 
     # Plot times1 and times2 with log-log scale
-    plt.loglog(
-        input_sizes, times1, label="prefix_average1", marker="o"
-    )
-    plt.loglog(
-        input_sizes, times2, label="prefix_average2", marker="o"
-    )
+    plt.loglog(input_sizes, times1, label="prefix_average1", marker="o")
+    plt.loglog(input_sizes, times2, label="prefix_average2", marker="o")
 
     # Label the axis
-    plt.xlabel("Input Size (n)")  
+    plt.xlabel("Input Size (n)")
     plt.ylabel("Execution Time (seconds)")
 
     # Add a title to the graph
-    plt.title(
-        "Execution Time vs Input Size for Prefix Average Algorithms"
-    )
+    plt.title("Execution Time vs Input Size for Prefix Average Algorithms")
 
     # Add a legend to the graph
     plt.legend()
