@@ -1,4 +1,5 @@
 def example1(S):
+    # Overall Time Complexity: O(n)
     n = len(S)  # O(1) - Getting the length of S is a constant time operation
     total = 0  # O(1) - Initializing a variable is a constant time operation
     for j in range(n):  # O(n) - The loop runs n times
@@ -6,10 +7,10 @@ def example1(S):
             j
         ]  # O(1) - Accessing an element and addition are constant time operations
     return total  # O(1) - Returning a value is a constant time operation
-# Overall Time Complexity: O(n)
 
 
 def example2(S):
+    # Overall Time Complexity: O(n)
     n = len(S)  # O(1) - Getting the length of S is a constant time operation
     total = 0  # O(1) - Initializing a variable is a constant time operation
     for j in range(
@@ -19,10 +20,10 @@ def example2(S):
             j
         ]  # O(1) - Accessing an element and addition are constant time operations
     return total  # O(1) - Returning a value is a constant time operation
-# Overall Time Complexity: O(n)
 
 
 def example3(S):
+    # Overall Time Complexity: O(n^2)
     n = len(S)  # O(1) - Getting the length of S is a constant time operation
     total = 0  # O(1) - Initializing a variable is a constant time operation
     for j in range(n):  # O(n) - The outer loop runs n times
@@ -33,10 +34,10 @@ def example3(S):
     # The total time complexity for the nested loops is the sum of the series 1 + 2 + 3 + ... + n
     # which is O(n^2)
     return total  # O(1) - Returning a value is a constant time operation
-# Overall Time Complexity: O(n^2)
 
 
 def example4(S):
+    # Overall Time Complexity: O(n)
     n = len(S)  # O(1) - Getting the length of S is a constant time operation
     prefix = 0  # O(1) - Initializing a variable is a constant time operation
     total = 0  # O(1) - Initializing a variable is a constant time operation
@@ -46,10 +47,10 @@ def example4(S):
         ]  # O(1) - Accessing an element and addition are constant time operations
         total += prefix  # O(1) - Addition is a constant time operation
     return total  # O(1) - Returning a value is a constant time operation
-# Overall Time Complexity: O(n)
 
 
 def example5(A, B):
+    # Overall Time Complexity: O(n^3)
     n = len(A)  # O(1) - Getting the length of A is a constant time operation
     count = 0  # O(1) - Initializing a variable is a constant time operation
     for i in range(n):  # O(n) - The outer loop runs n times
@@ -64,4 +65,3 @@ def example5(A, B):
             count += 1  # O(1) - Incrementing a variable is a constant time operation
     # The overall time complexity is O(n) * O(n^2) = O(n^3)
     return count  # O(1) - Returning a value is a constant time operation
-# Overall Time Complexity: O(n^3)
