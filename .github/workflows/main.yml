@@ -41,7 +41,7 @@ jobs:
           VALIDATE_NATURAL_LANGUAGE: false
           VALIDATE_XML: false
           FILTER_REGEX_EXCLUDE: test_*
-          FILTER_REGEX_INCLUDE: src/exercise3
+          FILTER_REGEX_INCLUDE: src/exercise2
 
   tests:
     runs-on: ubuntu-latest
