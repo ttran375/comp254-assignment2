@@ -1,4 +1,5 @@
 import pytest
+
 from .find_missing_number import find_missing_number
 
 

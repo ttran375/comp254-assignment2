@@ -1,4 +1,5 @@
 import pytest
+
 from .find_non_sum_integer import find_non_sum_integer
 
 
